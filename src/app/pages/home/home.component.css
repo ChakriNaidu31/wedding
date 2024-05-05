@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.home-img {
+    height: 100vh;
+}
+
+.event-details {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    padding-right: 15%;
+    padding-left: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    overflow-y: hidden;
+}
+.event-details-main {
+    font-family: "Pinyon Script";
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.25;
+    text-transform: none;
+    letter-spacing: 0em;
+    white-space: pre-wrap;
+    color: rgba(116, 77, 11, 1);
+
+}
+.event-details-sec {
+    font-family: "Pinyon Script";
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 1.25;
+    text-transform: none;
+    letter-spacing: 0em;
+    margin-top: 2rem;
+    color: rgba(116, 77, 11, 1);
+
+}
+.event-details-count {
+    font-family:  "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-feature-settings: "tnum", "lnum";
+    margin-top: 1.5rem;
+    color: rgba(116, 77, 11, 1);
+
+
+}
+.events-timings-h1 {
+    margin-left: 0.24rem;
+    margin-right: 0.24rem;
+    word-break: break-word;
+    font-family: "Pinyon Script";
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.25;
+    text-transform: none;
+    letter-spacing: 0em;
+    margin-top: 1rem;
+    text-align: center;
+    color: #333;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    max-width: 700px;
+}
+.events-timing-main {
+    margin: 0px auto;
+    max-width: 100%;
+    padding: 2.5rem 2rem 4rem;
+}
+.event-time {
+    font-weight: 400;
+    font-size: 1.1875rem;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-align: center;
+    font-family:  "Rubik", sans-serif;
+}
+.underlines {
+    border-bottom: 1px solid rgb(235, 235, 235);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+    margin-top: 0rem;
+}
+.event-name {
+    text-align: center;
+}
+.events-timings-h2 {
+    font-family:  "Rubik", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin-bottom: 0.875rem;
+    text-align: center;
+    word-break: break-word;
+}
+.events-timings-h3 {
+    font-family:  "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: rgb(118, 118, 118);
+}
+.event-buttons button {
+    display: inline-flex;
+    appearance: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 9999px;
+    vertical-align: middle;
+    border: 2px solid rgb(235, 235, 235);
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+    font-family:  "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0em;
+    font-feature-settings: "tnum", "lnum";
+    height: 3rem;
+    min-width: 3rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    background-color: transparent;
+    color: rgb(51, 51, 51);
+    width: auto;
+}
+.event-address-main {
+    font-family:  "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    color: rgb(161, 190, 148);
+}
+.event-address-main a {
+    color: rgb(161, 190, 148);
+}
+.right-section {
+    height: 100vh;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;   
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+@media (max-width:1023px)  { 
+    .right-section {
+        height: auto !important;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;   
+        flex-direction: column;
+        overflow-y: auto !important;
+        overflow-x: auto !important;
+    }
+}
+.bride-h1 {
+    font-family: "Pinyon Script";
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.16;
+    text-transform: none;
+    letter-spacing: 0em;
+    color: red;
+}
+.bride-h2 {
+    font-family:  "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-top: 1rem;
+    white-space: pre-wrap;
+    text-align: left;
+}
+h4.text-stroke.text-white.one {
+    position: absolute;
+    bottom: 280px;
+    left: 25px;
+}
+h4.text-stroke.text-white.second {
+    position: absolute;
+    bottom: 125px;
+    left: 25px;
+}
+.card-img-overlay.card-inverse {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.306) 13%, rgba(0, 0, 0, 0.227) 26%, rgba(0, 0, 0, 0.165) 37%, rgba(0, 0, 0, 0.114) 48%, rgba(0, 0, 0, 0.07) 59%, rgba(0, 0, 0, 0.043) 68%, rgba(0, 0, 0, 0.024) 77%, rgba(0, 0, 0, 0.008) 85%, rgba(0, 0, 0, 0.004) 92%, rgba(0, 0, 0, 0) 100%);
+}
+html {
+    overflow-y: hidden;
+}
