@@ -1,0 +1,22 @@
+.form-signin {
+    max-width: 380px;
+    padding: 1rem;
+}
+
+input.form-control {
+    font-size: 15px;
+    padding: 12px;
+}
+
+.login-img {
+    height: 100vh;
+}
+@media (max-width:767px){
+    .login-img {
+        display: none;
+    }
+}
+.login-logo {
+    height: 60px;
+    width: 60px;
+}

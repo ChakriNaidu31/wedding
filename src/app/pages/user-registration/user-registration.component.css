@@ -1,0 +1,25 @@
+.form-signin {
+    max-width: 360px;
+    padding: 1rem;
+}
+
+.f-13 {
+    font-size: 13px;
+}
+
+select.form-select {
+    font-size: 14px;
+}
+
+select.custom-select {
+    font-size: 13px;
+    height: 38px;
+    padding: 0px 11px;
+}
+
+input.form-control {
+    font-size: 14px;
+}
+.float-end .btn {
+    font-size: 14px;
+}
