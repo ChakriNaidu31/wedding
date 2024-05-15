@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 p-0">
+            <img src="https://withjoy.com/media/ebc1f2102710187e45aa926743d9b346f31f381b6e84f9272/RUfE4qDiTk6kVWRnUxVR_WhatsApp%20Image%202024-04-14%20at%2021.02.21.jpg?rendition=xlarge"
+                class="login-img w-100 img-fluid">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 p-0">
+            <div class="d-flex align-items-center py-4 h-100vh">
+                <div class="form-signin w-100 m-auto text-center">
+                    <form>
+                        <img src="../../../assets/images/login/one-time-password.png" class="login-logo mb-4"/>
+                        <h1 class="h3 fw-bold">Verification</h1>
+                        <p class="text-secondary mb-4">You will get OTP via SMS</p>
+                        <div *ngIf="showOtpComponent">
+                            <ng-otp-input
+                              [config]="config"
+                              (onInputChange)="onOtpChange($event)"
+                            ></ng-otp-input>
+                          </div>
+                          
+                          <p *ngIf="errorMessage" class="error text-danger mt-3">{{ errorMessage }}</p>
+                        
+                        <button class="btn btn-primary w-100 py-2 mt-3" type="submit" (click)="onSubmit()">VERIFY</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

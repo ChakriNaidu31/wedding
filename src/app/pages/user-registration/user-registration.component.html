@@ -1,0 +1,93 @@
+<app-nav></app-nav>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-12 ">
+            <h5 class="pt-4 px-4 mb-3 fw-bold">New User Registration</h5>
+            <form>
+                <div class="row px-4">
+                        <div class="col-sm-12 col-lg-2 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">First Name<span style="color: red">*</span></label>
+                                <input type="text" class="form-control" formControlName="firstName">
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-2 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Last Name<span style="color: red">*</span></label>
+                                <input type="text" class="form-control" formControlName="lastName">
+
+                            </div>
+                        </div>
+                        <div class="col-8"></div>
+
+                        <div class="col-sm-12 col-lg-4 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Mobile Number<span style="color: red">*</span></label>
+                                <input type="tel" class="form-control" formControlName="mobilenumber">
+
+                            </div>
+                        </div>
+                        <div class="col-8"></div>
+
+                        <div class="col-sm-12 col-lg-4 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Email<span style="color: red">*</span></label>
+                                <input type="email" class="form-control" formControlName="email">
+
+                            </div>
+                        </div>
+                        <div class="col-8"></div>
+                        <div class="col-sm-12 col-lg-4 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Address</label>
+                                <input type="email" class="form-control" formControlName="address">
+
+                            </div>
+                        </div>
+                        <div class="col-8"></div>
+                        <div class="col-sm-12 col-lg-2 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">City</label>
+                                <input type="name" class="form-control" formControlName="city">
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-2 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">State</label>
+                                <input type="email" class="form-control" formControlName="state">
+
+                            </div>
+                        </div>
+                        <div class="col-8"></div>
+
+                        <div class="col-sm-12 col-lg-2 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Postal</label>
+                                <input type="email" class="form-control" formControlName="postal">
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-lg-2 col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Country</label>
+                            <select class="form-select" formControlName="station">
+                                <option selected value="">SelectCountry</option>
+                                <option>Country 1</option>
+                            </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 float-end">
+                            <button type="submit" class="btn btn-primary ">Submit</button>
+                            <button class="btn btn-light ms-2">Cancel</button>
+                        </div>
+
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>

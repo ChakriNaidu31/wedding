@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Poppins", sans-serif !important;
+}
+.h-100vh {
+    height: 100vh !important;
+}
+label.form-label, input {
+    font-size: 14px;
+}
