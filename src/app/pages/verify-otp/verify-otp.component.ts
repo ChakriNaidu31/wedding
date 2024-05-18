@@ -55,7 +55,7 @@ export class VerifyOtpComponent {
     if (this.validateOtp()) {
       // Handle successful OTP validation logic here
       console.log('OTP Submitted:', this.otp);
-      this.router.navigate(['/user-registration']);
+      this.router.navigate(['/my-events-listing']);
       this.errorMessage = '';
     } else {
       this.errorMessage = 'Please enter a valid OTP.';

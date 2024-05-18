@@ -1,0 +1,177 @@
+<app-nav></app-nav>
+<div class="container-fluid ">
+  <div class="row p-4">
+    <div class="col-12 bg-white p-3 rounded">
+      <div class="d-flex align-items- ">
+        <div class="form-signin w-100 m-auto">
+          <form>
+            <div class="col-12 text-center px-0 pb-3">
+              <h5 class=" fw-bold">Create New Event</h5>
+            </div>
+
+            <div class="col-12">
+              <mat-stepper labelPosition="bottom" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Choose type</label>
+                      <select class="form-select" formControlName="station">
+                        <option selected value="">Select Type</option>
+                        <option>type 1</option>
+                      </select>
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Date of function</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="col-12  mt-3">
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch">
+                        <label class="form-check-label form-label" for="flexSwitchCheckDefault"> All day event</label>
+                      </div>
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Time of event</label>
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+                          <div>
+                            <label class="form-label">From</label>
+                            <input type="date" class="form-control">
+
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+                          <div>
+                            <label class="form-label">To</label>
+                            <input type="date" class="form-control">
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Bride Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12 mb-3">
+                      <label class="form-label">Groom Name</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Description</label>
+                      <textarea class="form-control" rows=""></textarea>
+                    </div>
+
+                    <div class="my-3">
+                      <button class="btn btn-primary px-3 float-end" matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                  <form [formGroup]="secondFormGroup">
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Upload photo</label>
+                      <div class="file-upload-container">
+                        <input type="file" class="form-control" (change)="onFileSelected($event)"
+                          [disabled]="files.length >= 3" multiple accept="image/*" />
+                        <div class="thumbnails">
+                          <div *ngFor="let file of files; let i = index" class="thumbnail">
+                            <img [src]="file.url" alt="Uploaded Image" />
+                            <button (click)="removeFile(i)">X</button>
+                          </div>
+                        </div>
+                        <p *ngIf="showErrorMessage" class="error-message">Maximum 3 files can be uploaded.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Address 1</label>
+                      <textarea class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Address 2</label>
+                      <textarea class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Address 3</label>
+                      <textarea class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                          <div class="mb-2">
+                            <label class="form-label">State</label>
+                            <input type="email" class="form-control">
+
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                          <div class="mb-2">
+                            <label class="form-label">Postal</label>
+                            <input type="email" class="form-control">
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-12">
+                      <div class="mb-1">
+                        <label class="form-label">Country</label>
+                      </div>
+                      <select class="form-select">
+                        <option selected value="">SelectCountry</option>
+                        <option>Country 1</option>
+                      </select>
+                    </div>
+
+
+                    <div class="my-3">
+                      <button class="btn btn-outline-secondary px-3" matStepperPrevious>Back</button>
+                      <button class="btn btn-primary float-end" matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+
+                <mat-step [stepControl]="thirdFormGroup">
+                  <form [formGroup]="thirdFormGroup">
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Address </label>
+                      <google-map height="400px" width="100%" [center]="center" [zoom]="zoom"
+                        (mapClick)="addMarker($event)">
+                      </google-map>
+                      <div class="col-12 mt-2">
+                        <label class="form-label mb-2">Selected Coordinates </label>
+                        <div *ngIf="selectedLocation">
+                          <input type="text" class="form-control" value="{{ selectedLocation.lat }}, {{ selectedLocation.lng }}">
+                        </div>
+                      </div>
+                      
+
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Contact 1</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12 mb-2">
+                      <label class="form-label">Contact 2</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="my-3">
+                      <button class="btn btn-outline-secondary px-3" matStepperPrevious>Back</button>
+                      <button class="btn btn-primary float-end px-3 ">Submit</button>
+                    </div>
+                  </form>
+                </mat-step>
+
+              </mat-stepper>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

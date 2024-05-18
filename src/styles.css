@@ -7,3 +7,8 @@ body {
 label.form-label, input {
     font-size: 14px;
 }
+body {
+    background-color: #01010112;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
