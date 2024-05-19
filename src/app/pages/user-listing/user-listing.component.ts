@@ -1,3 +1,4 @@
+
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatSort, MatSortModule} from '@angular/material/sort';
@@ -7,41 +8,24 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 export interface UserData {
   id: string;
-  name: string;
-  date: string;
-  guestCount: number;
+  firstName: string;
+  lastName: string;
+  mobileNumber: string;
+  verified: boolean;
 }
 
 /** Constants used to fill up our data base. */
 const NAMES: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
+  'John', 'Jane', 'Jim', 'Jill', 'Jack', 'Jenny', 'Joe', 'Judy', 'James', 'Jessica'
 ];
 
 @Component({
-  selector: 'app-event-listing',
-  templateUrl: './event-listing.component.html',
-  styleUrls: ['./event-listing.component.css']
+  selector: 'app-user-listing',
+  templateUrl: './user-listing.component.html',
+  styleUrls: ['./user-listing.component.css']
 })
-export class EventListingComponent implements AfterViewInit {
-  displayedColumns: string[] = ['name', 'date', 'guestCount', 'actions'];
+export class UserListingComponent implements AfterViewInit {
+  displayedColumns: string[] = ['firstName', 'lastName', 'mobileNumber', 'verified', 'actions'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -72,20 +56,16 @@ export class EventListingComponent implements AfterViewInit {
 
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] 
-   
-
-  // Generate random date
-  const date = new Date(+(new Date()) - Math.floor(Math.random() * 10000000000)).toLocaleDateString();
-
-  // Generate random guest count between 1 and 100
-  const guestCount = Math.round(Math.random() * 99) + 1;
+  const firstName = NAMES[Math.floor(Math.random() * NAMES.length)];
+  const lastName = NAMES[Math.floor(Math.random() * NAMES.length)];
+  const mobileNumber = `123-456-${Math.floor(1000 + Math.random() * 9000).toString()}`;
+  const verified = Math.random() < 0.5;
 
   return {
     id: id.toString(),
-    name: name,
-    date: date,
-    guestCount: guestCount,
+    firstName: firstName,
+    lastName: lastName,
+    mobileNumber: mobileNumber,
+    verified: verified,
   };
 }

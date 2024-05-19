@@ -1,7 +1,4 @@
-.form-signin {
-    max-width: 360px;
-    padding: 1rem;
-}
+
 
 .f-13 {
     font-size: 13px;
@@ -12,7 +9,7 @@ select.form-select {
 }
 
 select.custom-select {
-    font-size: 13px;
+    font-size: 14px;
     height: 38px;
     padding: 0px 11px;
 }
@@ -21,5 +18,36 @@ input.form-control {
     font-size: 14px;
 }
 .float-end .btn {
+    font-size: 14px;
+}
+
+
+@media (max-width:767px){
+    form {
+        width: auto;
+    }
+}
+
+table {
+    width: 100%;
+  }
+
+.form-signin {
+    max-width: 450px;
+    
+}
+
+input {
+    font-size: 14px;
+    background-position: 10px 13px;
+    background-repeat: no-repeat;
+    padding: 12px;
+    background-size: 18px;
+   
+}
+
+
+.error_msg {
+    color: red;
     font-size: 14px;
 }

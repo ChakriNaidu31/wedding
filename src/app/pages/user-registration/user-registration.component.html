@@ -1,93 +1,104 @@
 <app-nav></app-nav>
 <div class="container-fluid ">
-    <div class="row">
-        <div class="col-12 ">
-            <h5 class="pt-4 px-4 mb-3 fw-bold">New User Registration</h5>
-            <form>
-                <div class="row px-4">
-                        <div class="col-sm-12 col-lg-2 col-md-12">
-                            <div class="mb-3">
-                                <label class="form-label">First Name<span style="color: red">*</span></label>
-                                <input type="text" class="form-control" formControlName="firstName">
+    <div class="row p-4">
+        <div class="col-12 bg-white p-3 rounded">
+            <div class="d-flex align-items- ">
+                <div class="form-signin w-100 m-auto">
+                    <form>
+                        <div class="col-12 text-center px-0 pb-3">
+                            <h5 class=" fw-bold">New User Registration</h5>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mb-3">
+                                <div class="col-sm-12 col-md-12 col-lg-6 ">
+                                    <div>
+                                        <label class="form-label">First Name <span style="color: red">*</span></label>
+                                        <input type="text" class="form-control" formControlName="firstName">
+    
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <div >
+                                        <label class="form-label">Last Name <span style="color: red">*</span></label>
+                                        <input type="text" class="form-control" formControlName="lastName">
+    
+                                    </div>
+                                </div>
 
                             </div>
+                           
                         </div>
-                        <div class="col-sm-12 col-lg-2 col-md-12">
-                            <div class="mb-3">
-                                <label class="form-label">Last Name<span style="color: red">*</span></label>
-                                <input type="text" class="form-control" formControlName="lastName">
 
-                            </div>
-                        </div>
-                        <div class="col-8"></div>
 
-                        <div class="col-sm-12 col-lg-4 col-md-12">
+                        <div class="col-12">
                             <div class="mb-3">
-                                <label class="form-label">Mobile Number<span style="color: red">*</span></label>
+                                <label class="form-label">Mobile Number <span style="color: red">*</span></label>
                                 <input type="tel" class="form-control" formControlName="mobilenumber">
 
                             </div>
-                        </div>
-                        <div class="col-8"></div>
 
-                        <div class="col-sm-12 col-lg-4 col-md-12">
+                        </div>
+                        <div class="col-12">
                             <div class="mb-3">
-                                <label class="form-label">Email<span style="color: red">*</span></label>
+                                <label class="form-label">Email <span style="color: red">*</span></label>
                                 <input type="email" class="form-control" formControlName="email">
 
                             </div>
                         </div>
-                        <div class="col-8"></div>
-                        <div class="col-sm-12 col-lg-4 col-md-12">
+                        <div class="col-12">
                             <div class="mb-3">
                                 <label class="form-label">Address</label>
                                 <input type="email" class="form-control" formControlName="address">
-
+                                <input type="email" class="form-control mt-3" formControlName="address">
                             </div>
                         </div>
-                        <div class="col-8"></div>
-                        <div class="col-sm-12 col-lg-2 col-md-12">
+                        <div class="col-12">
                             <div class="mb-3">
                                 <label class="form-label">City</label>
                                 <input type="name" class="form-control" formControlName="city">
 
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-2 col-md-12">
-                            <div class="mb-3">
-                                <label class="form-label">State</label>
-                                <input type="email" class="form-control" formControlName="state">
+                        <div class="col-12">
+                            <div class="row mb-3">
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">State</label>
+                                        <input type="email" class="form-control" formControlName="state">
+        
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Postal</label>
+                                        <input type="email" class="form-control" formControlName="postal">
+        
+                                    </div>
+                                </div>
 
                             </div>
+                           
                         </div>
-                        <div class="col-8"></div>
-
-                        <div class="col-sm-12 col-lg-2 col-md-12">
-                            <div class="mb-3">
-                                <label class="form-label">Postal</label>
-                                <input type="email" class="form-control" formControlName="postal">
-
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 col-lg-2 col-md-12">
-                            <div class="mb-3">
+                        
+                        <div class="col-12">
+                            <div class="mb-1">
                                 <label class="form-label">Country</label>
+                            </div>
                             <select class="form-select" formControlName="station">
                                 <option selected value="">SelectCountry</option>
                                 <option>Country 1</option>
                             </select>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="mb-3 float-end">
+                                <button type="submit" class="btn btn-primary "
+                                    routerLink="/my-events-listing">Submit</button>
+                                <button class="btn btn-light ms-2">Cancel</button>
                             </div>
                         </div>
-                        
-                        <div class="mb-3 float-end">
-                            <button type="submit" class="btn btn-primary ">Submit</button>
-                            <button class="btn btn-light ms-2">Cancel</button>
-                        </div>
-
+                    </form>
                 </div>
-            </form>
-           
+            </div>
         </div>
     </div>
 </div>
