@@ -17,7 +17,10 @@ const routes: Routes = [
   { path: 'my-events-listing', component: EventListingComponent },
   { path: 'user-listing', component: UserListingComponent },
   { path: 'create-new-event', component: CreateNewEventComponent },
+
   { path: 'profile', component: ProfileComponent },
+
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
