@@ -1,0 +1,148 @@
+.f-13 {
+    font-size: 13px;
+}
+
+select.form-select {
+    font-size: 14px;
+}
+
+select.custom-select {
+    font-size: 14px;
+    height: 38px;
+    padding: 0px 11px;
+}
+
+input.form-control {
+    font-size: 14px;
+}
+
+.float-end .btn {
+    font-size: 14px;
+}
+
+
+@media (max-width:767px) {
+    form {
+        width: auto;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+.form-signin {
+    max-width: 450px;
+
+}
+
+input {
+    font-size: 14px;
+    background-position: 10px 13px;
+    background-repeat: no-repeat;
+    padding: 12px;
+    background-size: 18px;
+
+}
+
+
+.error_msg {
+    color: red;
+    font-size: 14px;
+}
+
+.card {
+
+    position: relative;
+
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.card__img {
+    height: 192px;
+    width: 100%;
+    background: #f8f9fa;
+    border-radius: 21px;
+}
+
+.card__img img {
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card__avatar img {
+    border-radius: 50%;
+}
+
+.card__avatar {
+    border-radius: 100%;
+    position: absolute;
+    width: 114px;
+    height: 114px;
+    background: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 95px);
+}
+
+.card__avatar svg {
+    width: 100px;
+    height: 100px;
+}
+
+.card__title {
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+}
+
+.card__subtitle {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #78858F;
+    text-align: center;
+}
+
+.card__btn {
+    margin-top: 15px;
+    width: 76px;
+    height: 31px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+    color: #000;
+    background: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.card__btn-solid {
+    background: #000;
+    color: #fff;
+}
+
+.card__btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.card__btn-solid:hover {
+    background: #fff;
+    color: #000;
+}
+
+.link {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}

@@ -18,9 +18,13 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
-import { GoogleMapsModule } from '@angular/google-maps';
+
 import { UserListingComponent } from './pages/user-listing/user-listing.component';
 import { CreateNewEventComponent } from './pages/create-new-event/create-new-event.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { CreateNewEventComponent } from './pages/create-new-event/create-new-eve
     EventListingComponent,
     NavComponent,
     UserListingComponent,
-    CreateNewEventComponent
+    CreateNewEventComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,7 @@ import { CreateNewEventComponent } from './pages/create-new-event/create-new-eve
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    GoogleMapsModule
+    MatGoogleMapsAutocompleteModule.forRoot('AIzaSyCaKbVhcX_22R_pRKDYuNA7vox-PtGaDkI'),
   ],
   providers: [],
   bootstrap: [AppComponent]
