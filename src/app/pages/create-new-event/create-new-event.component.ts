@@ -20,11 +20,12 @@ export class CreateNewEventComponent {
     thirdCtrl: ['', Validators.required],
   });
 
+ 
+
   files: { url: string, file: File }[] = [];
   showErrorMessage: boolean = false;
-  center: google.maps.LatLngLiteral = { lat: 20.5937, lng: 78.9629 }; // Coordinates for India
-  zoom = 5; // Adjust zoom level as needed
-  selectedLocation: google.maps.LatLngLiteral | null = null;
+
+  
   
 
   constructor(private _formBuilder: FormBuilder) {}
@@ -58,14 +59,7 @@ export class CreateNewEventComponent {
     this.files.splice(index, 1);
   }
 
-  addMarker(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) {
-      this.selectedLocation = {
-        lat: event.latLng.lat(),
-        lng: event.latLng.lng()
-      };
-    }
-  }
+  
 
 
 }

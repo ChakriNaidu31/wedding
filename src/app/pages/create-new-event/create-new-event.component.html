@@ -140,15 +140,11 @@
                   <form [formGroup]="thirdFormGroup">
                     <div class="col-12 mb-2">
                       <label class="form-label">Address </label>
-                      <google-map height="400px" width="100%" [center]="center" [zoom]="zoom"
-                        (mapClick)="addMarker($event)">
-                      </google-map>
-                      <div class="col-12 mt-2">
-                        <label class="form-label mb-2">Selected Coordinates </label>
-                        <div *ngIf="selectedLocation">
-                          <input type="text" class="form-control" value="{{ selectedLocation.lat }}, {{ selectedLocation.lng }}">
-                        </div>
-                      </div>
+                      <input matInput
+         matGoogleMapsAutocomplete class="form-control"
+         >
+         
+                      
                       
 
                     </div>
